@@ -17,7 +17,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
   private var recognitionTask: SFSpeechRecognitionTask?
   private let audioEngine = AVAudioEngine()
  
-  @IBOutlet weak var outputField: UITextField!
+  @IBOutlet weak var outputField: UILabel!
   @IBOutlet weak var recordButton: UIButton!
   
   @IBAction func recordButtonPressed(_ sender: UIButton) {

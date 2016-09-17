@@ -33,36 +33,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mt7-eb-TBS">
-                                <nil key="textColor"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Xy-Z1I"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKL-Qy-quA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="415" id="kJe-3u-THh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mt7-eb-TBS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0JO-l4-P7a"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1uN-kN-SAt"/>
                             <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="leading" secondItem="ukM-7e-x14" secondAttribute="trailing" constant="8" symbolic="YES" id="2hs-7N-C5P"/>
                             <constraint firstItem="sxV-W6-z2G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="K7y-QO-YZg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sxV-W6-z2G" secondAttribute="trailing" constant="79" id="KdV-UZ-yEK"/>
-                            <constraint firstItem="Mt7-eb-TBS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QPe-Jl-wf6"/>
-                            <constraint firstItem="Mt7-eb-TBS" firstAttribute="top" secondItem="sxV-W6-z2G" secondAttribute="bottom" constant="8" symbolic="YES" id="XPm-i4-xaG"/>
-                            <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="Mt7-eb-TBS" secondAttribute="leading" id="gBa-g5-9Og"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="leading" secondItem="sxV-W6-z2G" secondAttribute="leading" id="ceG-FO-SOy"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kxg-Xy-Z1I" secondAttribute="bottom" constant="69" id="kWD-ZI-MbD"/>
                             <constraint firstAttribute="trailing" secondItem="Kxg-Xy-Z1I" secondAttribute="trailing" constant="124" id="t9I-kc-944"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="top" secondItem="sxV-W6-z2G" secondAttribute="bottom" constant="8" symbolic="YES" id="uLz-Gj-TqT"/>
                             <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y8b-S3-qG5"/>
                             <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="bottom" secondItem="ukM-7e-x14" secondAttribute="bottom" id="yS2-SK-cw3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="indicator" destination="Kxg-Xy-Z1I" id="4lp-Q0-P0A"/>
-                        <outlet property="outputField" destination="Mt7-eb-TBS" id="deE-lv-C0f"/>
+                        <outlet property="outputField" destination="NKL-Qy-quA" id="9B4-Qh-wYz"/>
                         <outlet property="recordButton" destination="ukM-7e-x14" id="gCp-f6-f8n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.5" y="136.5"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>
