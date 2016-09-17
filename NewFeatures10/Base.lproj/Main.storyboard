@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NewFeatures10" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukM-7e-x14">
+                                <state key="normal" title="Recording"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXM-v7-hNg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo speech recognition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxV-W6-z2G">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Rgg-DU-Wo9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mt7-eb-TBS">
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Xy-Z1I"/>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mt7-eb-TBS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0JO-l4-P7a"/>
+                            <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="leading" secondItem="ukM-7e-x14" secondAttribute="trailing" constant="8" symbolic="YES" id="2hs-7N-C5P"/>
+                            <constraint firstItem="sxV-W6-z2G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="K7y-QO-YZg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sxV-W6-z2G" secondAttribute="trailing" constant="79" id="KdV-UZ-yEK"/>
+                            <constraint firstItem="Mt7-eb-TBS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QPe-Jl-wf6"/>
+                            <constraint firstItem="Mt7-eb-TBS" firstAttribute="top" secondItem="sxV-W6-z2G" secondAttribute="bottom" constant="8" symbolic="YES" id="XPm-i4-xaG"/>
+                            <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="Mt7-eb-TBS" secondAttribute="leading" id="gBa-g5-9Og"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kxg-Xy-Z1I" secondAttribute="bottom" constant="69" id="kWD-ZI-MbD"/>
+                            <constraint firstAttribute="trailing" secondItem="Kxg-Xy-Z1I" secondAttribute="trailing" constant="124" id="t9I-kc-944"/>
+                            <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y8b-S3-qG5"/>
+                            <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="bottom" secondItem="ukM-7e-x14" secondAttribute="bottom" id="yS2-SK-cw3"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="indicator" destination="Kxg-Xy-Z1I" id="4lp-Q0-P0A"/>
+                        <outlet property="outputField" destination="Mt7-eb-TBS" id="deE-lv-C0f"/>
+                        <outlet property="recordButton" destination="ukM-7e-x14" id="gCp-f6-f8n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.5" y="136.5"/>
         </scene>
     </scenes>
 </document>
