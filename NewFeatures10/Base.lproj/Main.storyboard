@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -25,6 +25,21 @@
                                     <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KXM-v7-hNg"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Xy-Z1I"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKL-Qy-quA">
+                                <frame key="frameInset" minX="16" minY="326" width="343" height="250"/>
+                                <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f83-i0-L19">
+                                <frame key="frameInset" minX="16" minY="100" width="343" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo speech recognition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxV-W6-z2G">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="Rgg-DU-Wo9"/>
@@ -33,31 +48,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Xy-Z1I"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKL-Qy-quA">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="415" id="kJe-3u-THh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NKL-Qy-quA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="1uN-kN-SAt"/>
-                            <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="leading" secondItem="ukM-7e-x14" secondAttribute="trailing" constant="8" symbolic="YES" id="2hs-7N-C5P"/>
-                            <constraint firstItem="sxV-W6-z2G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="K7y-QO-YZg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sxV-W6-z2G" secondAttribute="trailing" constant="79" id="KdV-UZ-yEK"/>
-                            <constraint firstItem="NKL-Qy-quA" firstAttribute="leading" secondItem="sxV-W6-z2G" secondAttribute="leading" id="ceG-FO-SOy"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kxg-Xy-Z1I" secondAttribute="bottom" constant="69" id="kWD-ZI-MbD"/>
-                            <constraint firstAttribute="trailing" secondItem="Kxg-Xy-Z1I" secondAttribute="trailing" constant="124" id="t9I-kc-944"/>
-                            <constraint firstItem="NKL-Qy-quA" firstAttribute="top" secondItem="sxV-W6-z2G" secondAttribute="bottom" constant="8" symbolic="YES" id="uLz-Gj-TqT"/>
-                            <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="y8b-S3-qG5"/>
-                            <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="bottom" secondItem="ukM-7e-x14" secondAttribute="bottom" id="yS2-SK-cw3"/>
+                            <constraint firstAttribute="bottom" secondItem="ukM-7e-x14" secondAttribute="bottom" constant="20" symbolic="YES" id="9DW-KW-WKl"/>
+                            <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CJf-as-6tX"/>
+                            <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="NKL-Qy-quA" secondAttribute="leading" id="SfF-Zk-YTi"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VcV-mM-73Q"/>
+                            <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="centerX" secondItem="ukM-7e-x14" secondAttribute="centerX" id="cWj-hJ-22M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sxV-W6-z2G" secondAttribute="trailing" constant="79" id="edA-Ym-hMK"/>
+                            <constraint firstItem="sxV-W6-z2G" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="t9W-2k-kvf"/>
+                            <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="top" secondItem="NKL-Qy-quA" secondAttribute="bottom" constant="13" id="urC-Ps-PAT"/>
+                            <constraint firstItem="ukM-7e-x14" firstAttribute="top" secondItem="Kxg-Xy-Z1I" secondAttribute="bottom" constant="8" symbolic="YES" id="vxz-xT-aXx"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="leading" secondItem="ukM-7e-x14" secondAttribute="leading" id="vzF-fC-xua"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="trailing" secondItem="ukM-7e-x14" secondAttribute="trailing" id="zNa-41-tFn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="exampleText" destination="f83-i0-L19" id="M67-dO-uQa"/>
                         <outlet property="indicator" destination="Kxg-Xy-Z1I" id="4lp-Q0-P0A"/>
                         <outlet property="outputField" destination="NKL-Qy-quA" id="9B4-Qh-wYz"/>
                         <outlet property="recordButton" destination="ukM-7e-x14" id="gCp-f6-f8n"/>
