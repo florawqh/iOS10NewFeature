@@ -17,6 +17,9 @@ class ViewController: UIViewController {
   private var recognitionTask: SFSpeechRecognitionTask?
   private let audioEngine = AVAudioEngine()
   
+  private var audioPlayer: AVAudioPlayer!
+  
+  
   @IBOutlet weak var outputField: UILabel!
   @IBOutlet weak var recordButton: UIButton!
   @IBOutlet var exampleText: UILabel!
@@ -95,8 +98,18 @@ class ViewController: UIViewController {
   }
   
   private func testRecordFile() {
-    let url = URL(string: "http://www.noiseaddicts.com/samples_1w72b820/55.mp3")
-    recognizeFile(url: url!)
+    if let path = Bundle.main.url(forResource: "Recording", withExtension: "mp3") {
+      do {
+        let sound = try AVAudioPlayer(contentsOf: path)
+        audioPlayer = sound
+        audioPlayer.delegate = self
+        sound.play()
+      } catch {
+        print("Audio play error!")
+      }
+
+      recognizeFile(url: path)
+    }
   }
   
   // MARK: - 3. Create a speech recognition request for live audio
@@ -184,6 +197,15 @@ extension ViewController: SFSpeechRecognizerDelegate {
       recordButton.isEnabled = false
       recordButton.setTitle("Recognition not available", for: .disabled)
     }
+  }
+}
+
+// MARK: - 6. AVAudioPlayerDelegate
+extension ViewController: AVAudioPlayerDelegate {
+  
+  func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+    player.stop()
+    indicator.isHidden = true
   }
 }
 
