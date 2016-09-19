@@ -9,8 +9,8 @@
 import UIKit
 import Speech
 
-class ViewController: UIViewController, SFSpeechRecognizerDelegate {
-    
+class ViewController: UIViewController {
+    let tapMessage = "Tap to start recording"
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -26,7 +26,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
             audioEngine.stop()
             recognitionRequest?.endAudio()
             recordButton.isEnabled = false
-            recordButton.setTitle("Tap to start recording", for: .normal)
+            recordButton.setTitle(tapMessage, for: .normal)
             indicator.isHidden = true
         } else {
             startRecording()
@@ -42,7 +42,7 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         setupSR()
     }
     
-    //2. request authorization
+    //MARK: - 2. request authorization
     private func setupSR() {
         speechRecognizer?.delegate = self
         
@@ -136,12 +136,17 @@ class ViewController: UIViewController, SFSpeechRecognizerDelegate {
         outputField.text = "Say something, I'm listening!"
         
     }
-    
+}
+
+// MARK: - 3. SFSpeechRecognizerDelegate
+extension ViewController: SFSpeechRecognizerDelegate {
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
             recordButton.isEnabled = true
+            recordButton.setTitle(tapMessage, for: [])
         } else {
             recordButton.isEnabled = false
+            recordButton.setTitle("Recognition not available", for: .disabled)
         }
     }
 }
