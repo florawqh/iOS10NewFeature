@@ -22,17 +22,19 @@ class ViewController: UIViewController {
   @IBOutlet var exampleText: UILabel!
   
   @IBAction func recordButtonPressed(_ sender: UIButton) {
-    if audioEngine.isRunning {
-      audioEngine.stop()
-      recognitionRequest?.endAudio()
-      recordButton.isEnabled = false
-      recordButton.setTitle(tapMessage, for: [])
-      indicator.isHidden = true
-    } else {
-      startRecording()
-      recordButton.setTitle("Recording... Tap to stop", for: .normal)
-      indicator.isHidden = false
-    }
+    
+    testRecordFile()
+//    if audioEngine.isRunning {
+//      audioEngine.stop()
+//      recognitionRequest?.endAudio()
+//      recordButton.isEnabled = false
+//      recordButton.setTitle(tapMessage, for: [])
+//      indicator.isHidden = true
+//    } else {
+//      startRecording()
+//      recordButton.setTitle("Recording... Tap to stop", for: .normal)
+//      indicator.isHidden = false
+//    }
   }
   
   @IBOutlet weak var indicator: UIActivityIndicatorView!
@@ -70,7 +72,34 @@ class ViewController: UIViewController {
       }
     }
   }
-  // MARK: - 3. Create a speech recognition request
+  
+  // MARK: - 3. Create a speech recognition request for pre-recorded audio
+  private func recognizeFile(url: URL) {
+    // Cancel the previous task if it's running
+    if recognitionTask != nil {
+      recognitionTask?.cancel()
+      recognitionTask = nil
+    }
+    
+    let request = SFSpeechURLRecognitionRequest(url: url)
+    speechRecognizer?.recognitionTask(with: request) { (result, error) in
+      guard let result = result else {
+        // handle error
+        return
+      }
+      if result.isFinal {
+        self.outputField.text = result.bestTranscription.formattedString
+      }
+      
+    }
+  }
+  
+  private func testRecordFile() {
+    let url = URL(string: "http://www.noiseaddicts.com/samples_1w72b820/55.mp3")
+    recognizeFile(url: url!)
+  }
+  
+  // MARK: - 3. Create a speech recognition request for live audio
   private func startRecording() {
     
     // Cancel the previous task if it's running
