@@ -26,15 +26,11 @@
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-Xy-Z1I"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKL-Qy-quA">
-                                <frame key="frameInset" minX="16" minY="326" width="343" height="250"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKL-Qy-quA">
                                 <color key="backgroundColor" red="0.7843137255" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f83-i0-L19">
-                                <frame key="frameInset" minX="16" minY="100" width="343" height="218"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="YCh-LD-jj4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,15 +49,27 @@
                                     <action selector="replayButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AxR-8w-7o4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f83-i0-L19">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="223" id="b4f-wM-fEu"/>
+                                </constraints>
+                                <string key="text">We choose to go to the moon. We choose to go to the moon in this decade and do the other things, not because they are easy, but because they are hard, because that goal will serve to organize and measure the best of our energies and skills, because that challenge is one that we are willing to accept, one we are unwilling to postpone, and one which we intend to win, and the others, too.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="f83-i0-L19" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="16w-nF-UR6"/>
                             <constraint firstAttribute="bottom" secondItem="ukM-7e-x14" secondAttribute="bottom" constant="20" symbolic="YES" id="9DW-KW-WKl"/>
                             <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CJf-as-6tX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="f83-i0-L19" secondAttribute="leading" id="HFg-T5-gcw"/>
                             <constraint firstItem="3JV-AE-E7L" firstAttribute="centerY" secondItem="sxV-W6-z2G" secondAttribute="centerY" id="Mqv-ku-DSg"/>
-                            <constraint firstItem="f83-i0-L19" firstAttribute="top" secondItem="3JV-AE-E7L" secondAttribute="bottom" constant="39" id="SUR-G6-yVZ"/>
                             <constraint firstItem="sxV-W6-z2G" firstAttribute="leading" secondItem="NKL-Qy-quA" secondAttribute="leading" id="SfF-Zk-YTi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NKL-Qy-quA" secondAttribute="bottom" constant="91" id="Ub9-Cf-JtJ"/>
                             <constraint firstItem="NKL-Qy-quA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VcV-mM-73Q"/>
+                            <constraint firstItem="NKL-Qy-quA" firstAttribute="top" secondItem="f83-i0-L19" secondAttribute="bottom" constant="23" id="XfE-gz-rq8"/>
                             <constraint firstItem="Kxg-Xy-Z1I" firstAttribute="centerX" secondItem="ukM-7e-x14" secondAttribute="centerX" id="cWj-hJ-22M"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sxV-W6-z2G" secondAttribute="trailing" constant="79" id="edA-Ym-hMK"/>
                             <constraint firstItem="3JV-AE-E7L" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="185" id="fsW-RR-2zP"/>

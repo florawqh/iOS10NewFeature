@@ -60,17 +60,25 @@
 		6DA216921D8D737B00C68CDE /* NewFeatures10 */ = {
 			isa = PBXGroup;
 			children = (
+				967617581D90F09C00275D98 /* resource */,
 				6DA216931D8D737B00C68CDE /* AppDelegate.swift */,
 				6DA216951D8D737B00C68CDE /* ViewController.swift */,
 				6DA216971D8D737B00C68CDE /* Main.storyboard */,
 				6DA2169A1D8D737B00C68CDE /* Assets.xcassets */,
 				6DA2169C1D8D737B00C68CDE /* LaunchScreen.storyboard */,
 				6DA2169F1D8D737B00C68CDE /* Info.plist */,
+			);
+			path = NewFeatures10;
+			sourceTree = "<group>";
+		};
+		967617581D90F09C00275D98 /* resource */ = {
+			isa = PBXGroup;
+			children = (
 				967617521D90AD3100275D98 /* 55.mp3 */,
 				967617561D90CC9500275D98 /* 54.mp3 */,
 				967617541D90AD3800275D98 /* 50.mp3 */,
 			);
-			path = NewFeatures10;
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
