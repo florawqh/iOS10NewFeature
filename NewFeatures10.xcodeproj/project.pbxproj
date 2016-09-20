@@ -12,6 +12,9 @@
 		6DA216991D8D737B00C68CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA216971D8D737B00C68CDE /* Main.storyboard */; };
 		6DA2169B1D8D737B00C68CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2169A1D8D737B00C68CDE /* Assets.xcassets */; };
 		6DA2169E1D8D737B00C68CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DA2169C1D8D737B00C68CDE /* LaunchScreen.storyboard */; };
+		967617531D90AD3100275D98 /* 55.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 967617521D90AD3100275D98 /* 55.mp3 */; };
+		967617551D90AD3800275D98 /* 50.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 967617541D90AD3800275D98 /* 50.mp3 */; };
+		967617571D90CC9500275D98 /* 54.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 967617561D90CC9500275D98 /* 54.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		6DA2169A1D8D737B00C68CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DA2169D1D8D737B00C68CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6DA2169F1D8D737B00C68CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967617521D90AD3100275D98 /* 55.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 55.mp3; sourceTree = "<group>"; };
+		967617541D90AD3800275D98 /* 50.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 50.mp3; sourceTree = "<group>"; };
+		967617561D90CC9500275D98 /* 54.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 54.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				6DA2169A1D8D737B00C68CDE /* Assets.xcassets */,
 				6DA2169C1D8D737B00C68CDE /* LaunchScreen.storyboard */,
 				6DA2169F1D8D737B00C68CDE /* Info.plist */,
+				967617521D90AD3100275D98 /* 55.mp3 */,
+				967617561D90CC9500275D98 /* 54.mp3 */,
+				967617541D90AD3800275D98 /* 50.mp3 */,
 			);
 			path = NewFeatures10;
 			sourceTree = "<group>";
@@ -124,9 +133,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967617551D90AD3800275D98 /* 50.mp3 in Resources */,
 				6DA2169E1D8D737B00C68CDE /* LaunchScreen.storyboard in Resources */,
 				6DA2169B1D8D737B00C68CDE /* Assets.xcassets in Resources */,
+				967617531D90AD3100275D98 /* 55.mp3 in Resources */,
 				6DA216991D8D737B00C68CDE /* Main.storyboard in Resources */,
+				967617571D90CC9500275D98 /* 54.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
